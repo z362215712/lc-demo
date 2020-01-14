@@ -81,37 +81,6 @@ public class TestController {
          * <p>
          * 链接：https://leetcode-cn.com/problems/balanced-binary-tree
          */
-        public boolean isBalanced(TreeNode root) {
-            return checkHasNextNode(root, 0).isB;
-
-        }
-
-        private BalanceNode checkHasNextNode(TreeNode root, int level) {
-            if (root == null) {
-                return new BalanceNode(level, true);
-            }
-            BalanceNode leftBalanceNode = this.checkHasNextNode(root.left, level + 1);
-            BalanceNode rightBalanceNode = this.checkHasNextNode(root.right, level + 1);
-            if (!leftBalanceNode.isB || !rightBalanceNode.isB) {
-                return new BalanceNode(0, false);
-            }
-
-            if (Math.abs(leftBalanceNode.level - rightBalanceNode.level) > 1) {
-                return new BalanceNode(0, false);
-            }
-
-            return new BalanceNode(Math.max(leftBalanceNode.level, rightBalanceNode.level), true);
-        }
-
-        public class BalanceNode {
-            int level;
-            boolean isB;
-
-            BalanceNode(int x, boolean isBalance) {
-                level = x;
-                isB = isBalance;
-            }
-        }
 
         /**
          * 给定一个二叉树，检查它是否是镜像对称的。
