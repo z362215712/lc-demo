@@ -12,7 +12,7 @@ import com.leetcode.tree.TreeNode;
 public class dandiaozhan {
 
     class Solution {
-//        public int getTotal(int[] nums) {
+        public void getTotal(int[] nums) {
 //            if (nums.length == 0) {
 //                return 0;
 //            }
@@ -24,13 +24,24 @@ public class dandiaozhan {
 //
 //                }
 //            }
-//        }
+
+        }
 
     }
 
     public static void main(String[] args) {
-        dandiaozhan dandiaozhan = new dandiaozhan();
+//        dandiaozhan dandiaozhan = new dandiaozhan();
+//        for (int i = 0; i < 1000000; i++) {
+//            System.out.println(i);
+//            try {
+//                Thread.sleep(10);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
+
+        System.out.println((byte)'a');
     }
 
 }

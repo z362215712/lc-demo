@@ -42,26 +42,63 @@ import java.util.Arrays;
  * 链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class l26 {
-    public static void main(String[] args) {
-        int[] nums = {1, 1, 2, 2, 2, 2, 3, 3};
-        l26 l26 = new l26();
+public class e26 {
+//    public static void main(String[] args) {
+//        int[] nums = {1, 1, 2, 2, 2, 2, 3, 3};
+//        e26 e26 = new e26();
+//
+//        System.out.println(e26.removeDuplicates(nums));
+//        System.out.println(Arrays.toString(nums));
+//
+//    }
+//
+//    public int removeDuplicates(int[] nums) {
+//        if (nums.length == 0) {
+//            return 0;
+//        }
+//        int i = 0, j = 0;
+//        while (j++ < nums.length - 1) {
+//            if (nums[i] != nums[j]) {
+//                nums[++i] = nums[j];
+//            }
+//        }
+//        return i + 1;
+//    }
 
-        System.out.println(l26.removeDuplicates(nums));
-        System.out.println(Arrays.toString(nums));
 
-    }
-
-    public int removeDuplicates(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
-        int i = 0, j = 0;
-        while (j++ < nums.length - 1) {
-            if (nums[i] != nums[j]) {
-                nums[++i] = nums[j];
+    class Solution {
+        public int removeDuplicates(int[] nums) {
+            int i = 0;
+            for (int j = 1; j < nums.length; j++) {
+                if (nums[j] != nums[i]) {
+                    nums[++i] = nums[j];
+                }
             }
+            return i+1;
         }
-        return i + 1;
     }
+
+    public static void main(String[] args) {
+        e26 testController = new e26();
+        e26.Solution solution = testController.new Solution();
+
+//[0,0,1,1,1,2,2,3,3,4],
+        int[] nums = new int[10];
+        nums[0] = 0;
+        nums[1] = 0;
+        nums[2] = 1;
+        nums[3] = 1;
+        nums[4] = 1;
+        nums[5] = 2;
+        nums[6] = 2;
+        nums[7] = 3;
+        nums[8] = 3;
+        nums[9] = 4;
+
+        System.out.println(solution.removeDuplicates(nums));
+        for (int num : nums) {
+            System.out.println(num);
+        }
+    }
+
 }
