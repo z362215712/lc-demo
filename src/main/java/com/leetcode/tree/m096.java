@@ -77,10 +77,10 @@ public class m096 {
             if(root.val >maxValue || root.val<minValue){
                 return new ResultNode(false, 0, 0);
             }
-            if(){
-
-            }
-            return
+//            if(){
+//
+//            }
+            return null;
 
         }
 
@@ -94,7 +94,7 @@ public class m096 {
 //        root4.left = new TreeNode(9);
 //        root4.right = new TreeNode(12);
 //        root4.left.left = new TreeNode(3);
-//        root4.left.right = new TreeNode(15);
+//        root4.left.right = new TreeNode(0000015);
 //        root4.right.left = new TreeNode(10);
 //        root4.right.right = new TreeNode(17);
 
